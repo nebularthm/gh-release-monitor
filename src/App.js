@@ -1,37 +1,32 @@
 import { Octokit } from "@octokit/core";
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import RepoList from "./components/RepoList"
+// const octokit = new Octokit();
 
-const octokit = new Octokit();
-
-octokit.request('GET /repos/{owner}/{repo}/releases', {
-  owner: 'microsoft',
-  repo: 'vscode'
-}).then(
-  (response) => {
-    console.log(response);
-  }
-);
+// octokit.request('GET /repos/{owner}/{repo}/releases', {
+//   owner: 'microsoft',
+//   repo: 'vscode'
+// }).then(
+//   (response) => {
+//     console.log(response);
+//     console.log(Object.keys(response))
+//   }
+// );
+//  octokit.request('GET /search/repositories', {
+//   q: 'React'
+// }).then((response) => {
+//   console.log("search query")
+// console.log(Object.keys(response))
+// console.log(response.data)
+// console.log(response.data.items[0].full_name)//This prop lets us get the first name of the best
+// });
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RepoList></RepoList>
     </div>
   );
 }
