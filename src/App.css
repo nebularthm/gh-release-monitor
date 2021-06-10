@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: grey;
 }
 
 .App-logo {
@@ -11,6 +12,9 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+body {
+  color: black;
 }
 
 .App-header {
@@ -26,6 +30,11 @@
 
 .App-link {
   color: #61dafb;
+}
+@media only screen and (min-width: 768px) {
+  .App {
+    display: flex;
+  }
 }
 
 @keyframes App-logo-spin {

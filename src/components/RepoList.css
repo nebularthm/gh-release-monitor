@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  width: 50%;
+  flex: 1;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .column {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row {
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+  }
+}
+body {
+  color: black;
+}
+p {
+  color: blue;
+}
+span {
+  color: blue;
+}
+h3 {
+  color: blue;
+}
+h2 {
+  color: blue;
+}
